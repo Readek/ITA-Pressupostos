@@ -1,34 +1,67 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './assets/App.css'
+import Product from './components/Product'
+import { productData } from './data/ProductData.mjs'
+import Price from './components/Price';
+
+const cartInfo = [];
+for (let i = 0; i < productData.length; i++) {
+  cartInfo.push(0);
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [ totalPrice, setTotalPrice ] = useState(0);
+
+  /**
+   * Caller product sets its own price, then calculate total amongst all
+   * @param {Number} index - Product position on the array
+   * @param {Number} price - Price decided by product
+   */
+  function addRemovePrice(index, price) {
+
+    cartInfo[index] = price;
+
+    let total = 0;
+    cartInfo.forEach(price => {
+      total += price
+    });
+
+    setTotalPrice(total);
+
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="pressContent">
+
+        <div className="itAcademyLogoDiv">
+          <img className='itAcademyLogoImg' src="" alt="⚙️"/>
+          <div className="itAcademyLogoText">Frontender.itacademy</div>
+        </div>
+
+        <div id="pressBanner">
+          Aconsegueix la millor qualitat
+        </div>
+
+        <div id="pressProductsDiv">
+          {productData.map(product => (
+            <Product
+              proData={product}
+              num={productData.findIndex(intProd => intProd.name == product.name)}
+              checkEv={addRemovePrice}
+            />
+          ))}
+        </div>
+
+        <div id="pressTotalPrice">
+          <div id="pressTotalPriceText">Preu pressupostat:</div>
+          <Price
+            value={totalPrice}
+            type={"€"}
+          />
+        </div>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
   )
 }
 

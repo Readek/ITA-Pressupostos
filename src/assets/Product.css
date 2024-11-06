@@ -1,0 +1,27 @@
+.pressProdDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .2));
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+
+.pressProdTextDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 45%;
+
+}
+.pressProdName {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.pressProdAddDiv {
+    display: flex;
+    gap: 4px;
+}

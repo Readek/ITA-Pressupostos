@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+#root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#pressContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10%;
+    max-width: 1500px;
+}
+
+.itAcademyLogoDiv {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    font-weight: bold;
+}
+
+#pressBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: lightblue;
+    border-radius: 30px;
+    padding: 60px 0px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#pressProductsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 20px 0px;
+}
+
+#pressTotalPrice {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 80%;
+    gap: 30px;
+}
+#pressTotalPriceText {
+    font-size: larger;
+    font-weight: bold;
+}
