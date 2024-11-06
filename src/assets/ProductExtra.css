@@ -1,0 +1,35 @@
+.pressProdExtraInfoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.pressProdExtraValues {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pressProdExtraBtn {
+    border-radius: 100%;
+    border: 1px solid lightgray;
+    color: gray;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pressProdExtraNum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: lightgray 1px solid;
+    border-radius: 10px;
+    width: 60px;
+    height: 35px;
+    font-weight: bold;
+    font-size: large;
+}
