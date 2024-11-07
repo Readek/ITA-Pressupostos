@@ -61,6 +61,10 @@ function App() {
           />
         </div>
 
+        <a href="/">
+          <button id="pressGoBackBtn">Tornar a l'inici</button>
+        </a>
+
       </div>
   )
 }
