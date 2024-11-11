@@ -12,10 +12,20 @@ function Product({proData, num, checkEv}) {
     const handleChange = () => {setChecked(!checked)}
 
     useEffect( () => {
+
+        const prodToSend = {};
+
         let finalPrice = proData.price;
         finalPrice += (pageNum + langNum) * 30;
         if (!checked) finalPrice = 0;
-        checkEv(num, finalPrice);
+        prodToSend.price = finalPrice;
+
+        prodToSend.name = proData.name;
+        prodToSend.pages = pageNum;
+        prodToSend.langs = langNum;
+
+        checkEv(num, prodToSend);
+        
     }, [checked, pageNum, langNum])
 
     return(
@@ -45,7 +55,7 @@ function Product({proData, num, checkEv}) {
                         labelText={"Nombre de llenguatges"}
                         setNum={setLangNum}
                     />
-                    </div>
+                </div>
             ) : null}
         </div>
     )

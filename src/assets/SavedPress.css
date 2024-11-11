@@ -1,0 +1,38 @@
+.pressSavedDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .2));
+    border-radius: 20px;
+    padding: 30px 40px;
+    gap: 15px;
+}
+
+.pressSavedUserDiv {
+    width: 100%;
+}
+.pressSavedUserName {
+    font-size: x-large;
+    font-weight: bold;
+}
+.pressSavedUserEmail, .pressSavedUserPhone {
+    color: gray;
+}
+
+.pressSavedProductsDiv {
+    width: 100%;
+}
+.pressSavedProductsTitle {
+    font-weight: bold;
+}
+
+.pressSavedTotalDiv {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.pressSavedTotalText {
+    color: gray;
+}

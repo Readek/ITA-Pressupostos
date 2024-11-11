@@ -20,7 +20,7 @@ function ProductExtra({labelText, setNum}) {
             <div className="pressProdExtraPagenumText">{labelText}</div>
             <div className="pressProdExtraValues">
                 <button className="pressProdExtraBtn" onClick={handleMinusClick} disabled={disMinus}>-</button>
-                <div className='pressProdExtraNum'>{extraNum}</div>
+                <div className='pressProdExtraNum'>{extraNum + 1}</div>
                 <button className='pressProdExtraBtn' onClick={handlePlusClick}>+</button>
             </div>
         </div>
